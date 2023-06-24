@@ -1,38 +1,198 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
   text-align: center;
+  margin-bottom: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.containerInput {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.containerInput input {
+  flex-grow: 1;
+  height: 36px;
+  padding: 6px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.containerInput select {
+  height: 36px;
+  padding: 6px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+  width: 200px;
+  margin-top: 10px;
+}
+
+.ButtonSearch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.ButtonSearch:hover {
+  background-color: #0056b3;
+}
+
+.ButtonSearch:focus {
+  outline: none;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.game-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.game-item {
+  width: calc(33% - 10px);
+  margin-bottom: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+}
+
+.game-item img {
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  max-height: 200px;
+  border-radius: 4px;
+}
+
+.game-item p {
+  margin-top: 0px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.load-container {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.loader {
+  animation: spin 1s linear infinite;
 }
 
-@keyframes App-logo-spin {
-  from {
+.loading {
+  background-color: #f2f2f2;
+}
+
+.btn-back {
+  background-color: #f5f5f5;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.game-details {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.game-details img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 400px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.game-details h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.game-details p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.game-details button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.game-details button:hover {
+  background-color: #0056b3;
+}
+
+.game-details button:focus {
+  outline: none;
+}
+
+.game-title {
+  font-family: 'Playfair Display', serif;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.game-description {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+  .game-item {
+    width: 100%;
+  }
+}
+
+@keyframes spin {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+
+  100% {
     transform: rotate(360deg);
   }
 }
