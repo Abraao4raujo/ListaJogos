@@ -1,9 +1,9 @@
-![Screenshot (28)](https://github.com/Abraao4raujo/DesafioListaJogos/assets/96948947/147499f9-5fb4-4bf1-b93d-b7afa332fe7d)
-![Screenshot (29)](https://github.com/Abraao4raujo/DesafioListaJogos/assets/96948947/c60b0c4f-fbc5-4d4b-a6c4-1b074d79ce3e)
-![Screenshot (30)](https://github.com/Abraao4raujo/DesafioListaJogos/assets/96948947/9789569c-158c-4a41-965a-9f416a7fec3c)
-![Screenshot (31)](https://github.com/Abraao4raujo/DesafioListaJogos/assets/96948947/eaf79406-da20-451e-a28a-97ec63ad7613)
-![Screenshot (32)](https://github.com/Abraao4raujo/DesafioListaJogos/assets/96948947/89816179-aefd-483a-8906-bf253dffa6b0)
-![Screenshot (33)](https://github.com/Abraao4raujo/DesafioListaJogos/assets/96948947/86cff70f-e14c-4182-867a-d7c982bb89e5)
+![Screenshot (28)](https://github.com/Abraao4raujo/ListaJogos/assets/96948947/ed159c56-ccb0-4079-9edf-b41ab9f94523)
+![Screenshot (29)](https://github.com/Abraao4raujo/ListaJogos/assets/96948947/83771435-2fab-433d-8592-2f757a34771a)
+![Screenshot (30)](https://github.com/Abraao4raujo/ListaJogos/assets/96948947/9e1730e2-d96b-42ab-9444-0d263aa68b5e)
+![Screenshot (31)](https://github.com/Abraao4raujo/ListaJogos/assets/96948947/01267ea8-0f21-43b5-b561-9f84fb89a747)
+![Screenshot (32)](https://github.com/Abraao4raujo/ListaJogos/assets/96948947/2dd59de4-6e6a-42c4-91e7-0a11691e5d91)
+![Screenshot (33)](https://github.com/Abraao4raujo/ListaJogos/assets/96948947/cfc2e1f1-c74a-4905-9a49-af8e61f1d61e)
 
 # Lista de Jogos
 ### Este projeto é uma lista de jogos criada utilizando uma API sem documentação. Foi desenvolvido como um desafio adicional para lidar com os problemas e limitações da API, visando oferecer uma experiência melhor para o usuário.
