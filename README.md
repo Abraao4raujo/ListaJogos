@@ -1,4 +1,3 @@
-# Lista de Jogos
 ### Este projeto é uma lista de jogos criada utilizando uma API sem documentação. Foi desenvolvido como um desafio adicional para lidar com os problemas e limitações da API, visando oferecer uma experiência melhor para o usuário.
 
 ![Screenshot (28)](https://github.com/Abraao4raujo/ListaJogos/assets/96948947/ed159c56-ccb0-4079-9edf-b41ab9f94523)
