@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+![Screenshot (28)](https://github.com/Abraao4raujo/DesafioListaJogos/assets/96948947/147499f9-5fb4-4bf1-b93d-b7afa332fe7d)
+![Screenshot (29)](https://github.com/Abraao4raujo/DesafioListaJogos/assets/96948947/c60b0c4f-fbc5-4d4b-a6c4-1b074d79ce3e)
+![Screenshot (30)](https://github.com/Abraao4raujo/DesafioListaJogos/assets/96948947/9789569c-158c-4a41-965a-9f416a7fec3c)
+![Screenshot (31)](https://github.com/Abraao4raujo/DesafioListaJogos/assets/96948947/eaf79406-da20-451e-a28a-97ec63ad7613)
+![Screenshot (32)](https://github.com/Abraao4raujo/DesafioListaJogos/assets/96948947/89816179-aefd-483a-8906-bf253dffa6b0)
+![Screenshot (33)](https://github.com/Abraao4raujo/DesafioListaJogos/assets/96948947/86cff70f-e14c-4182-867a-d7c982bb89e5)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Lista de Jogos
+### Este projeto é uma lista de jogos criada utilizando uma API sem documentação. Foi desenvolvido como um desafio adicional para lidar com os problemas e limitações da API, visando oferecer uma experiência melhor para o usuário.
 
-## Available Scripts
+## Funcionalidades
+### Exibição de uma lista de jogos obtida através da API.
+### Barra de pesquisa para buscar jogos por título.
+### Filtro por gênero para mostrar apenas os jogos relacionados a um determinado gênero.
 
-In the project directory, you can run:
+## Tecnologias Utilizadas
+### React: biblioteca JavaScript para construção da interface do usuário.
+### Axios: biblioteca JavaScript para realizar requisições HTTP.
+### HTML e CSS: estruturação e estilização da aplicação.
 
-### `npm start`
+## Como executar o projeto
+### Certifique-se de ter o Node.js instalado em sua máquina.
+### Faça o clone deste repositório.
+### Navegue até o diretório do projeto através do terminal.
+### Instale as dependências do projeto executando o comando npm install.
+### Após a instalação das dependências, execute o comando npm start para iniciar o servidor de desenvolvimento.
+### Acesse a aplicação no seu navegador através do endereço http://localhost:3000.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contribuição
+### Contribuições são bem-vindas! Se você encontrou algum bug, tem sugestões de melhorias ou deseja adicionar novas funcionalidades, fique à vontade para abrir uma issue ou enviar um pull request.
