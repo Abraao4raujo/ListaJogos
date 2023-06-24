@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Abraao4raujo/DesafioListaJogos/static/css/main.c2ef6da0.css",
+    "main.js": "/Abraao4raujo/DesafioListaJogos/static/js/main.df3a1482.js",
+    "index.html": "/Abraao4raujo/DesafioListaJogos/index.html",
+    "main.c2ef6da0.css.map": "/Abraao4raujo/DesafioListaJogos/static/css/main.c2ef6da0.css.map",
+    "main.df3a1482.js.map": "/Abraao4raujo/DesafioListaJogos/static/js/main.df3a1482.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c2ef6da0.css",
+    "static/js/main.df3a1482.js"
+  ]
+}
