@@ -1,0 +1,22 @@
+
+.ButtonShowFavorite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.ButtonShowFavorite:hover {
+  background-color: #ff0000;
+  transition: color 0.3s ease;
+}
+
+.ButtonShowFavorite:focus {
+  outline: none;
+}

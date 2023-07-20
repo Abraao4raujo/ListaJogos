@@ -50,7 +50,7 @@
   align-items: center;
   width: 36px;
   height: 36px;
-  background-color: #007bff;
+  background-color: #ccc;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -58,7 +58,8 @@
 }
 
 .ButtonSearch:hover {
-  background-color: #0056b3;
+  background-color: #ff0000;
+  transition: color 0.3s ease;
 }
 
 .ButtonSearch:focus {
@@ -75,7 +76,6 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
 .game-item {
   width: calc(33% - 10px);
   margin-bottom: 15px;
@@ -83,14 +83,24 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.game-item:hover {
+  transform: translateY(-5px);
 }
 
 .game-item img {
-  width: auto;
+  width: 100%;
   height: auto;
   object-fit: cover;
-  max-height: 200px;
-  border-radius: 4px;
+  max-height: 250px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }
 
 .game-item p {
@@ -98,6 +108,19 @@
   margin-bottom: 15px;
   font-size: 16px;
   font-weight: bold;
+}
+
+.game-title {
+  font-family: 'Playfair Display', serif;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.game-description {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  margin-top: 5px;
 }
 
 .load-container {
@@ -168,18 +191,26 @@
   outline: none;
 }
 
-.game-title {
-  font-family: 'Playfair Display', serif;
-  margin-top: 10px;
-  font-size: 16px;
-  font-weight: bold;
+.favorite {
+  background-color: #f9f9f9;
 }
 
-.game-description {
-  font-family: 'Playfair Display', serif;
-  font-size: 16px;
-  margin-top: 5px;
+.favorite-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
+
+.heart-icon {
+  color: #ff0000;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.heart-icon:hover {
+  color: #ff0000;
+}
+
 
 @media (max-width: 768px) {
   .game-item {
@@ -194,5 +225,31 @@
 
   100% {
     transform: rotate(360deg);
+  }
+}
+
+.star-button {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 5px;
+  color: black;
+}
+
+.star-button.active {
+  color: gold;
+}
+
+@keyframes fadeIn {
+  
+ 
+from {
+    
+   
+opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
