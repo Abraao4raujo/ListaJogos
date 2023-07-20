@@ -1,0 +1,26 @@
+.logout-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 36px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.logout-button:hover {
+  background-color: #d32f2f;
+}
+
+.logout-button:focus {
+  outline: none;
+}
+
+/* Estilo para ocultar o botão de logout quando o usuário não estiver conectado */
+.logout-button-hidden {
+  display: none;
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import { auth } from "../services/firebaseConfig";
+import "./logoutButton.css"
 
 const LogoutButton = () => {
   const handleLogout = () => {
@@ -15,7 +16,7 @@ const LogoutButton = () => {
       });
   };
 
-  return <button onClick={handleLogout}>Deslogar</button>;
+  return <button className="logout-button" onClick={handleLogout}>Sair</button>;
 };
 
 export default LogoutButton;
