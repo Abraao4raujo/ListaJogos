@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import LoginPage from "../pages/login";
-import RegisterPage from "../pages/register";
-import ListaGames from "../ApiGame"
+import LoginPage from "../auth/login";
+import RegisterPage from "../auth/register";
+import ListaGames from "../ApiGame";
 
 const AppRoutes = () => {
   return (
@@ -10,7 +10,7 @@ const AppRoutes = () => {
       <Routes>
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
-        <Route path="/" element={<ListaGames/>} />
+        <Route path="/" element={<ListaGames />} />
       </Routes>
     </BrowserRouter>
   );

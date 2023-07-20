@@ -7,7 +7,8 @@ import "./ApiGame.css";
 import GameSearch from "./components/GameSearch";
 import { auth, db } from "./services/firebaseConfig";
 import saveFavoritesToFirestore from "./components/saveFavorites";
-import { doc, getDoc } from "firebase/firestore";
+import { doc, getDoc, updateDoc } from "firebase/firestore";
+import getUserDocument from ".//components/getUserDocument";
 
 const ApiGame = () => {
   const [games, setGames] = useState([]);
@@ -21,18 +22,46 @@ const ApiGame = () => {
   const navigate = useNavigate();
   const [rating, setRating] = useState(0);
   const [favoritesLoaded, setFavoritesLoaded] = useState(false);
-  const handleRating = (e, gameId, value) => {
+  const [sortOrder, setSortOrder] = useState("desc");
+
+  const handleSortToggle = () => {
+    setSortOrder((prevOrder) => (prevOrder === "desc" ? "asc" : "desc"));
+  };
+
+  const handleRating = async (e, gameId, value) => {
     e.stopPropagation();
 
     if (!currentUser) {
-      navigate("/register");
+      navigate("/login");
       return;
     }
+    try {
+      // Atualize a avaliação localmente
+      setRating((prevRating) => ({
+        ...prevRating,
+        [gameId]: value,
+      }));
 
-    setRating((prevRating) => ({
-      ...prevRating,
-      [gameId]: value,
-    }));
+      // Salve a avaliação no Firestore
+      const userRef = doc(db, "users", currentUser.uid);
+      const userSnapshot = await getDoc(userRef);
+
+      if (userSnapshot.exists()) {
+        const userData = userSnapshot.data();
+        const updatedRatings = {
+          ...userData.ratings,
+          [gameId]: value,
+        };
+
+        await updateDoc(userRef, {
+          ratings: updatedRatings,
+        });
+
+        console.log("Avaliação do jogo salva no Firestore com sucesso!");
+      }
+    } catch (error) {
+      console.error("Erro ao salvar a avaliação do jogo no Firestore:", error);
+    }
   };
 
   const handleGameClick = (game) => {
@@ -55,7 +84,7 @@ const ApiGame = () => {
         saveFavoritesToFirestore(currentUser.uid, gameId, true);
       }
     } else {
-      navigate("/register");
+      navigate("/login");
     }
   };
 
@@ -67,34 +96,49 @@ const ApiGame = () => {
     }
   }, [loading]);
 
-  useEffect(() => {
-    const fetchFavorites = async () => {
-      if (currentUser) {
-        try {
-          const userRef = doc(db, "users", currentUser.uid);
-          const userSnapshot = await getDoc(userRef);
+  const fetchFavorites = async () => {
+    if (currentUser) {
+      try {
+        const userRef = doc(db, "users", currentUser.uid);
+        const userSnapshot = await getDoc(userRef);
 
-          if (userSnapshot.exists()) {
-            const userData = userSnapshot.data();
-            if (userData.favorites && Array.isArray(userData.favorites)) {
-              setFavorites(userData.favorites);
-            } else {
-              setFavorites([]);
-            }
+        if (userSnapshot.exists()) {
+          const userData = userSnapshot.data();
+          if (userData.favorites && Array.isArray(userData.favorites)) {
+            setFavorites(userData.favorites);
           } else {
             setFavorites([]);
           }
-        } catch (error) {
-          console.error("Error fetching favorites:", error);
+
+          if (userData.ratings) {
+            setRating(userData.ratings);
+          } else {
+            setRating({});
+          }
+        } else {
+          setFavorites([]);
+          setRating({});
         }
-      } else {
-        setFavorites([]);
+      } catch (error) {
+        console.error("Erro ao carregar os favoritos:", error);
       }
-      setFavoritesLoaded(true);
-    };
+    } else {
+      setFavorites([]);
+      setRating({});
+    }
+    setFavoritesLoaded(true);
 
+    const sortedGames = [...games];
+    sortedGames.sort((gameA, gameB) => {
+      const ratingA = rating[gameA.id] || 0;
+      const ratingB = rating[gameB.id] || 0;
+      return sortOrder === "desc" ? ratingB - ratingA : ratingA - ratingB;
+    });
+    setFilteredGames(sortedGames);
+    setLoading(false);
+  };
+  useEffect(() => {
     fetchFavorites();
-
     const config = {
       headers: {
         "dev-email-address": "gamerabrao001@gmail.com",
@@ -152,6 +196,7 @@ const ApiGame = () => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
         setCurrentUser(user);
+        fetchFavorites();
       } else {
         setCurrentUser(null);
       }

@@ -25,7 +25,7 @@ const GameSearch = ({ games, setFilteredGames, favorites, currentUser }) => {
       // saveFavoritesToFirestore(currentUser ? currentUser.uid : null, favorites);
       console.log(currentUser);
 
-      navigate("/register");
+      navigate("/login");
     }
     // setShowFavorites(!showFavorites);
   };

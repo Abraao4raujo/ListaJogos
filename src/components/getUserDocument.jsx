@@ -11,7 +11,7 @@ const getUserDocument = async (userId) => {
       return null;
     }
   } catch (error) {
-    console.error("Error fetching user document:", error);
+    console.error("erro ao carregar documento", error);
     return null;
   }
 };
